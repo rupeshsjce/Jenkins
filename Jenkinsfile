@@ -15,6 +15,10 @@ pipeline {
         stage("build") {
             steps {
                 echo 'Doing build ...'
+                script {
+                   gv = load "script.groovy" 
+                }
+
             }
         }
         stage("deploy") {
